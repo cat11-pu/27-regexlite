@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {"pattern": "a(b|c)d", "text": "zzabdzz"},
+    {"pattern": "x[0-9]+", "text": "x12y"},
+    {"pattern": "(ab)?c", "text": "abc"},
+    {"pattern": "a.*b", "text": "axxbxxc"}
+  ],
+  "bad": ["a(b", "[a-", "*a"],
+  "longest": ["ab", "ab"],
+  "automaton_required": true,
+  "linear_visits": true,
+  "budget": {
+    "pattern": "a*a*a*b",
+    "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "limit_ms": 5000,
+    "repeat": 200
+  }
+}
